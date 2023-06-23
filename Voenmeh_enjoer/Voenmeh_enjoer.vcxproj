@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\_vs_lib\SDL2-2.28.0\include;C:\_vs_lib\SDL2_ttf-2.20.2\include;C:\_vs_lib\SDL2_mixer-2.6.3\include;C:\_vs_lib\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\_vs_lib\SDL2-2.28.0\lib\x64;C:\_vs_lib\SDL2_ttf-2.20.2\lib\x64;C:\_vs_lib\SDL2_mixer-2.6.3\lib\x64;C:\_vs_lib\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2-2.28.0\include;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_ttf-2.20.2\include;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_mixer-2.6.3\include;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2-2.28.0\lib\x64;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_ttf-2.20.2\lib\x64;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_mixer-2.6.3\lib\x64;C:\Users\dadot\source\repos\С++\Proga\kursach\Voenmeh_enjoer\Voenmeh_enjoer\_vs_lib\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

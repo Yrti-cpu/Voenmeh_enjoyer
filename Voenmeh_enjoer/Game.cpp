@@ -676,11 +676,11 @@ void Game::generateGameObject()
 {
 	std::random_device rdx, rdy, rdn;
 	std::mt19937 gen1(rdx());
-	std::uniform_int_distribution<> dist1(0, 1880);
+	std::uniform_int_distribution<> dist1(0, 1840);
 	int xpos = dist1(gen1);
 
 	std::mt19937 gen2(rdy());
-	std::uniform_int_distribution<> dist2(0, 1040);
+	std::uniform_int_distribution<> dist2(0, 1000);
 
 	int ypos = dist2(gen2);
 
@@ -738,11 +738,22 @@ void Game::update()
 		{
 			player->set_xpos(0);
 		}
+
 		GameObject* o;
+		GameObject* s = NULL;
+
 		for (int i = 4, points = 0; i < manager.get_size(); i++)
 		{
+			if (manager.isText(i) && manager.get_GameObject(i)->get_ypos() == 50)
+			{
+				s = manager.get_GameObject(i);
+				break;
+			}
+		}
 
 
+		for (int i = 4, points = 0; i < manager.get_size(); i++)
+		{
 			o = manager.get_GameObject(i);
 			if (manager.isText(i) && manager.get_GameObject(i)->get_ypos() == 50)
 			{
@@ -751,6 +762,7 @@ void Game::update()
 			if (manager.isText(i) && manager.get_GameObject(i)->get_ypos() == 0 && (std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - tick_time).count() >= 1))
 			{
 				o->destroy();
+				manager.refresh();
 				tick--;
 				wchar_t buffer[10];
 				swprintf(buffer, 10, L"%d", tick);
@@ -770,20 +782,16 @@ void Game::update()
 				Mix_PlayChannel(-1, gItem, 0);
 				points = x * o->get_point();
 				o->destroy();
+				manager.refresh();
+				--i;
 				score += points;
-
-				int j = 4;
-				while (!manager.isText(j) && manager.get_GameObject(j)->get_ypos() != 50)
-				{
-					j++;
-				}
-				GameObject* t = manager.get_GameObject(j);
-				t->destroy();
+				s->destroy();
+				manager.refresh();
 				wchar_t buffer[10];
 				swprintf(buffer, 10, L"%d", score);
 				const wchar_t* myWcharPtr = buffer;
 				manager.addText(100, 50, myWcharPtr, color);
-				manager.refresh();
+				s = manager.get_GameObject(manager.get_size()-1);
 				if (points < 0)
 				{
 					count++;
