@@ -1,5 +1,6 @@
 # Coursework(Status: ✅)
-![image](https://github.com/Yrti-cpu/CollectorGame/assets/113043293/8e784a2e-828f-485e-b83b-c9e625bbaa2b)
+
+![preview](https://github.com/Yrti-cpu/Voenmeh_enjoer/assets/113043293/eb606aef-15c1-4d6c-b7aa-ef45458dcb15)
 
 ## ТРЕБОВАНИЯ К ВЫПОЛНЕНИЮ КУРСОВОЙ РАБОТЫ
 + 1 Требования к возможностям программы и процессу ее выполнения:
