@@ -1,0 +1,33 @@
+#pragma once
+#include <iostream>
+
+class Vector2D
+{
+public:
+	int x;//координата x
+	int y;//координата y
+
+	Vector2D();//конструктор по умолчанию
+	Vector2D(int x, int y);//констроктор для добавления своих координат
+
+	//действия над координатами
+	Vector2D& Add(const Vector2D& vec);
+	Vector2D& Subtract(const Vector2D& vec);
+
+
+	//перегрузка операций
+	friend Vector2D& operator+(Vector2D& v1, const Vector2D& v2);
+	friend Vector2D& operator-(Vector2D& v1, const Vector2D& v2);
+
+
+	Vector2D& operator+=(const Vector2D& vec);
+	Vector2D& operator-=(const Vector2D& vec);
+
+
+	Vector2D& operator*(const int& i);
+	Vector2D& Zero();
+
+	friend std::ostream& operator<<(std::ostream& stream, const Vector2D& vec);
+};
+
+
